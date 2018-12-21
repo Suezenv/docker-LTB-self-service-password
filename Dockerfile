@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.16
+FROM suezenv/baseimage
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
