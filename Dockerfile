@@ -19,6 +19,9 @@ RUN sed -i 's#/var/log/apache2/ssp_error.log#/dev/stdout#g' `dpkg -L self-servic
 
 # This is where configuration goes
 ADD assets/config.inc.php /usr/share/self-service-password/conf/config.inc.php
+ADD assets/sendtoken.php /usr/share/self-service-password/pages/sendtoken.php
+ADD assets/en.inc.php /usr/share/self-service-password/lang/en.inc.php
+ADD assets/fr.inc.php /usr/share/self-service-password/lang/fr.inc.php
 
 # Start Apache2 as runit service
 RUN mkdir /etc/service/apache2
